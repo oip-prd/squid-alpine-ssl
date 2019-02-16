@@ -10,9 +10,11 @@ prepare_folders() {
 	mkdir -p /etc/squid-cert/
 	mkdir -p /var/cache/squid/
 	mkdir -p /var/log/squid/
+	mkdir -p /var/spool/squid/
 	"$CHOWN" -R squid:squid /etc/squid-cert/
 	"$CHOWN" -R squid:squid /var/cache/squid/
 	"$CHOWN" -R squid:squid /var/log/squid/
+	"$CHOWN" -R squid:squid /var/spool/squid/
 }
 
 initialize_cache() {
