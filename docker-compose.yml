@@ -1,12 +1,13 @@
 version: "3"
 services:
   squid-alpine-ssl:
-    image: alatas/squid-alpine-ssl:latest
+    build: ./
+    image: oiprnd/squid-alpine-ssl:latest
     environment:
-      - CN=squid.local
-      - O=squid
-      - OU=squid
-      - C=US
+      - CN=squid.oip
+      - O=OIP
+      - OU=Labs
+      - C=FR
     ports:
       - "3128:3128"
       - "4128:4128"
