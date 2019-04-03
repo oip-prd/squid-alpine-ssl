@@ -16,4 +16,9 @@ services:
       - ./conf/squid.conf:/etc/squid/squid.conf
       - ./cache:/var/cache
       - ./cert:/etc/squid-cert
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 65535
+        hard: 65535
     restart: always
